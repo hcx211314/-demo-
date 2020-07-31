@@ -2,7 +2,7 @@
   "name": "testtag",
   "version": "1.0.0",
   "description": "A Vue.js project",
-  "author": "魏龙龙 <3229165361@qq.com>",
+  "author": "魏龙龙 <1071989764@qq.com>",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
