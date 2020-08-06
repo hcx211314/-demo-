@@ -34,6 +34,12 @@
     </div>
     cashedViews:{{ this.$store.state.cachedViews }}
     <!-- <p>visitedViews:{{this.$store.state.visitedViews}}</p> -->
+    <button @click="testAsync">异步更新数据</button>
+    store.getters:{{$store.getters.doneTodos}}
+     <!-- <p>user中通过getters中获取user的数据{{$store.user.getters.user}}</p> -->
+    <p>通过state{{$store.state.user.user}}</p>
+    <p>通过user中的getters{{$store.getters.getUserAge}}</p>
+    <button @click="testModulesAsync">异步modules更新数据</button>
   </div>
 </template>
 
@@ -58,6 +64,12 @@ export default {
     this.addTags()
   },
   methods: {
+    testModulesAsync () {
+      this.$store.dispatch('asyncChnageUser')
+    },
+    testAsync () {
+      this.$store.dispatch('increment')
+    },
     test1 (path) {
       this.$router.push({
         path,
