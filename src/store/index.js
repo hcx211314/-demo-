@@ -52,6 +52,9 @@ const store = new Vuex.Store({
   getters: {
     doneTodos: state => {
       return state.countNum + state.count
+    },
+    getUserAge: state => {
+      return state.user.user + '这么多岁'
     }
   },
   modules

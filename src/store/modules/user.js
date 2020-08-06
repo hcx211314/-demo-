@@ -1,4 +1,5 @@
 const user = {
+  namespaced: true,
   state: () => ({ user: 3 }),
   mutations: {
     changeUser (state) {

@@ -36,9 +36,9 @@
     <!-- <p>visitedViews:{{this.$store.state.visitedViews}}</p> -->
     <button @click="testAsync">异步更新数据</button>
     store.getters:{{$store.getters.doneTodos}}
-     <!-- <p>user中通过getters中获取user的数据{{$store.user.getters.user}}</p> -->
+     <p>user中通过getters中获取user的数据{{$store.getters.getUserAge}}</p>
     <p>通过state{{$store.state.user.user}}</p>
-    <p>通过user中的getters{{$store.getters.getUserAge}}</p>
+    <p>通过user中的getters{{$store.getters['user/getUserAge']}}</p>
     <button @click="testModulesAsync">异步modules更新数据</button>
   </div>
 </template>
@@ -65,7 +65,7 @@ export default {
   },
   methods: {
     testModulesAsync () {
-      this.$store.dispatch('asyncChnageUser')
+      this.$store.dispatch('user/asyncChnageUser')
     },
     testAsync () {
       this.$store.dispatch('increment')
